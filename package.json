@@ -1,0 +1,50 @@
+{
+  "name": "portfolio-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Personal portfolio website built with React + Vite",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chamara-Dilshan/portfolio-website.git"
+  },
+  "keywords": ["portfolio", "react", "vite", "tailwindcss"],
+  "author": "Chamara Dilshan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chamara-Dilshan/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/Chamara-Dilshan/portfolio-website#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.22.0",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-hook-form": "^7.50.0",
+    "framer-motion": "^11.0.0",
+    "react-icons": "^5.0.1",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.0",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.17",
+    "@tailwindcss/typography": "^0.5.10",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19"
+  }
+}
