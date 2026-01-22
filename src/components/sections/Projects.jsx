@@ -1,12 +1,15 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import ProjectCard from '../ui/ProjectCard'
+import ProjectModal from '../ui/ProjectModal'
 import { projects } from '../../data/projects'
 
 const Projects = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [selectedProject, setSelectedProject] = useState(null)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -49,12 +52,22 @@ const Projects = () => {
           >
             {projects.map((project) => (
               <motion.div key={project.id} variants={itemVariants}>
-                <ProjectCard project={project} />
+                <ProjectCard
+                  project={project}
+                  onClick={() => setSelectedProject(project)}
+                />
               </motion.div>
             ))}
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Project Detail Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   )
 }

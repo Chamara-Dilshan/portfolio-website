@@ -1,10 +1,17 @@
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 
-const ProjectCard = ({ project }) => {
-  const { title, description, image, tech, liveUrl, githubUrl } = project
+const ProjectCard = ({ project, onClick }) => {
+  const { title, description, image, tech, githubUrl } = project
+
+  const handleGithubClick = (e) => {
+    e.stopPropagation()
+  }
 
   return (
-    <div className="card overflow-hidden group">
+    <div
+      onClick={onClick}
+      className="card overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow duration-300"
+    >
       {/* Project Image */}
       <div className="relative h-48 bg-dark-100 overflow-hidden">
         {image ? (
@@ -18,37 +25,25 @@ const ProjectCard = ({ project }) => {
             🚀
           </div>
         )}
+      </div>
 
-        {/* Overlay with links */}
-        <div className="absolute inset-0 bg-dark-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+      {/* Content */}
+      <div className="p-5">
+        <div className="flex items-start justify-between gap-2 mb-2">
+          <h3 className="font-semibold text-lg text-dark-800">{title}</h3>
           {githubUrl && (
             <a
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white rounded-full text-dark-800 hover:text-primary-600 transition-colors"
+              onClick={handleGithubClick}
+              className="p-2 text-dark-500 hover:text-dark-800 hover:bg-dark-100 rounded-lg transition-colors flex-shrink-0"
               aria-label="View on GitHub"
             >
-              <FaGithub size={20} />
-            </a>
-          )}
-          {liveUrl && (
-            <a
-              href={liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-white rounded-full text-dark-800 hover:text-primary-600 transition-colors"
-              aria-label="View live site"
-            >
-              <FaExternalLinkAlt size={18} />
+              <FaGithub size={18} />
             </a>
           )}
         </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-5">
-        <h3 className="font-semibold text-lg mb-2 text-dark-800">{title}</h3>
 
         <p className="text-dark-500 text-sm mb-4 line-clamp-2">{description}</p>
 
