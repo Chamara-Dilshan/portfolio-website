@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
 const socialLinks = [
   { icon: FaGithub, href: 'https://github.com/Chamara-Dilshan', label: 'GitHub' },
-  { icon: FaLinkedin, href: 'https://linkedin.com/in/chamaradilshan', label: 'LinkedIn' },
+  { icon: FaLinkedin, href: 'https://linkedin.com/in/chamara-dilshan', label: 'LinkedIn' },
   { icon: FaEnvelope, href: 'mailto:chamaradilshan.dev@gmail.com', label: 'Email' },
 ]
 
