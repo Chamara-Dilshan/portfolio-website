@@ -39,8 +39,8 @@ const Skills = () => {
     fullWidthCategories.includes(category)
   )
 
-  const renderCategory = ([category, skillList], isLast = false) => (
-    <div key={category} className={isLast ? '' : 'mb-8'}>
+  const renderCategory = ([category, skillList]) => (
+    <div key={category} className="mb-8">
       <h3 className="text-lg font-semibold text-dark-700 mb-4">{category}</h3>
 
       <motion.div
@@ -80,22 +80,18 @@ const Skills = () => {
           <div className="grid md:grid-cols-2 gap-x-8">
             {/* Left Column */}
             <div>
-              {leftSkills.map((skill, index) =>
-                renderCategory(skill, index === leftSkills.length - 1)
-              )}
+              {leftSkills.map((skill) => renderCategory(skill))}
             </div>
 
             {/* Right Column */}
             <div>
-              {rightSkills.map((skill, index) =>
-                renderCategory(skill, index === rightSkills.length - 1)
-              )}
+              {rightSkills.map((skill) => renderCategory(skill))}
             </div>
           </div>
 
           {/* Full width section - Design & Tools (always at bottom) */}
-          <div className="mt-8">
-            {fullWidthSkills.map((skill) => renderCategory(skill, true))}
+          <div>
+            {fullWidthSkills.map((skill) => renderCategory(skill))}
           </div>
         </motion.div>
       </div>
