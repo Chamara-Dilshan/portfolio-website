@@ -5,7 +5,7 @@ export const projects = [
     description:
       'A comprehensive point-of-sale system with inventory management, sales tracking, and reporting features built with React and Node.js.',
     image: '/projects/pos-system.png',
-    tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     liveUrl: null,
     githubUrl: 'https://github.com/Chamara-Dilshan/pos-system',
     features: [
@@ -21,7 +21,7 @@ export const projects = [
     description:
       'A full-featured car rental application allowing users to browse, book, and manage vehicle rentals with an intuitive interface.',
     image: '/projects/car-rental.png',
-    tech: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     liveUrl: null,
     githubUrl: 'https://github.com/Chamara-Dilshan/car-rental',
     features: [
