@@ -35,11 +35,11 @@ const Projects = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="heading-2 text-center mb-4">
+          <h2 className="heading-2 text-center mb-4 text-secondary-500">
             Featured <span className="text-gradient">Projects</span>
           </h2>
 
-          <p className="text-dark-500 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-neutral-600 text-center mb-12 max-w-2xl mx-auto text-lg">
             Here are some of my recent projects. Each one was an opportunity to
             learn something new and solve interesting problems.
           </p>

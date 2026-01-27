@@ -86,12 +86,12 @@ const colorMap = {
 
 const SkillBadge = ({ skill }) => {
   const Icon = iconMap[skill.icon] || FaCode
-  const colorClass = colorMap[skill.icon] || 'text-dark-600'
+  const colorClass = colorMap[skill.icon] || 'text-neutral-600'
 
   return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-dark-100 hover:shadow-md hover:border-primary-200 transition-all">
-      <Icon className={`${colorClass}`} size={18} />
-      <span className="text-dark-700 font-medium">{skill.name}</span>
+    <div className="skill-badge group">
+      <Icon className={`${colorClass} group-hover:scale-110 transition-transform duration-300`} size={20} />
+      <span className="text-secondary-500 font-semibold text-sm">{skill.name}</span>
     </div>
   )
 }

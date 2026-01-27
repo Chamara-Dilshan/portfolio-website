@@ -40,8 +40,11 @@ const Skills = () => {
   )
 
   const renderCategory = ([category, skillList]) => (
-    <div key={category} className="mb-8">
-      <h3 className="text-lg font-semibold text-dark-700 mb-4">{category}</h3>
+    <div key={category} className="mb-10">
+      <div className="flex items-center gap-3 mb-5">
+        <div className="h-1 w-8 bg-gradient-to-r from-accent-400 to-primary-500 rounded-full" />
+        <h3 className="text-lg font-bold text-secondary-500">{category}</h3>
+      </div>
 
       <motion.div
         variants={containerVariants}
@@ -59,19 +62,23 @@ const Skills = () => {
   )
 
   return (
-    <section id="skills" className="section-padding bg-dark-50">
-      <div className="container-custom">
+    <section id="skills" className="section-padding bg-gradient-to-b from-neutral-50 to-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-20 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-0 w-96 h-96 bg-accent-400/5 rounded-full blur-3xl" />
+
+      <div className="container-custom relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="heading-2 text-center mb-4">
+          <h2 className="heading-2 text-center mb-4 text-secondary-500">
             Skills & <span className="text-gradient">Technologies</span>
           </h2>
 
-          <p className="text-dark-500 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-neutral-600 text-center mb-12 max-w-2xl mx-auto text-lg">
             I work with a variety of technologies to bring ideas to life. Here are
             the tools and technologies I use most frequently.
           </p>

@@ -59,11 +59,11 @@ const Contact = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="heading-2 text-center mb-4">
+          <h2 className="heading-2 text-center mb-4 text-secondary-500">
             Get In <span className="text-gradient">Touch</span>
           </h2>
 
-          <p className="text-dark-500 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-neutral-600 text-center mb-12 max-w-2xl mx-auto text-lg">
             Have a project in mind or want to collaborate? Feel free to reach out.
             I'm always open to discussing new opportunities.
           </p>
@@ -71,40 +71,42 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h3 className="heading-3 mb-6">Let's talk</h3>
+              <h3 className="heading-3 mb-6 text-secondary-500">Let's talk</h3>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary-100 rounded-lg text-primary-600">
+              <div className="space-y-5 mb-8">
+                <div className="flex items-center gap-4 group">
+                  <div className="p-4 bg-gradient-to-br from-accent-400 to-accent-500 rounded-xl text-white shadow-lg group-hover:shadow-accent-500/30 group-hover:scale-110 transition-all duration-300">
                     <FaEnvelope size={20} />
                   </div>
                   <div>
-                    <p className="text-sm text-dark-500">Email</p>
+                    <p className="text-sm text-neutral-500 font-semibold mb-1">Email</p>
                     <a
                       href="mailto:chamaradilshan.dev@gmail.com"
-                      className="text-dark-800 hover:text-primary-600 transition-colors"
+                      className="text-secondary-500 hover:text-accent-500 transition-colors font-medium"
                     >
                       chamaradilshan.dev@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary-100 rounded-lg text-primary-600">
+                <div className="flex items-center gap-4 group">
+                  <div className="p-4 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl text-white shadow-lg group-hover:shadow-primary-500/30 group-hover:scale-110 transition-all duration-300">
                     <FaMapMarkerAlt size={20} />
                   </div>
                   <div>
-                    <p className="text-sm text-dark-500">Location</p>
-                    <p className="text-dark-800">Sri Lanka</p>
+                    <p className="text-sm text-neutral-500 font-semibold mb-1">Location</p>
+                    <p className="text-secondary-500 font-medium">Sri Lanka</p>
                   </div>
                 </div>
               </div>
 
-              <p className="text-dark-600">
-                I'm currently available for freelance work and full-time
-                opportunities. If you have a project that needs some creative
-                touch, I'd love to hear about it!
-              </p>
+              <div className="p-5 bg-gradient-to-br from-accent-50 to-primary-50 rounded-2xl border border-accent-200/50">
+                <p className="text-neutral-700 leading-relaxed">
+                  I'm currently available for freelance work and full-time
+                  opportunities. If you have a project that needs some creative
+                  touch, I'd love to hear about it!
+                </p>
+              </div>
             </div>
 
             {/* Contact Form */}
@@ -181,10 +183,16 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn-accent w-full disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
-                    'Sending...'
+                    <span className="flex items-center justify-center gap-2">
+                      <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </span>
                   ) : (
                     <>
                       Send Message <FaPaperPlane className="ml-2" />
@@ -193,15 +201,15 @@ const Contact = () => {
                 </button>
 
                 {submitStatus === 'success' && (
-                  <p className="text-green-600 text-center">
-                    Message sent successfully!
-                  </p>
+                  <div className="p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-center font-medium">
+                    ✓ Message sent successfully!
+                  </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <p className="text-red-600 text-center">
-                    Something went wrong. Please try again.
-                  </p>
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-center font-medium">
+                    ✗ Something went wrong. Please try again.
+                  </div>
                 )}
               </form>
             </div>

@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg shadow-primary-500/5 border-b border-neutral-200/50' : 'bg-transparent'
       }`}
     >
       <div className="container-custom">
@@ -45,7 +45,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-dark-700 hover:text-dark-900"
+            className="md:hidden p-2 text-secondary-500 hover:text-accent-500 transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
@@ -60,7 +60,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-dark-100"
+            className="md:hidden bg-white border-t border-neutral-200"
           >
             <nav className="container-custom py-4">
               <Navigation mobile onItemClick={() => setIsMobileMenuOpen(false)} />

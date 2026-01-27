@@ -3,62 +3,153 @@ import { HiArrowDown } from 'react-icons/hi'
 
 const Hero = () => {
   const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+    const aboutSection = document.getElementById('about')
+    if (aboutSection) {
+      const headerOffset = 80 // Height of fixed header
+      const elementPosition = aboutSection.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
   }
 
   return (
     <section className="min-h-screen flex items-center justify-center relative pt-16">
-      <div className="container-custom text-center">
+      <div className="container-custom text-center relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-primary-600 font-medium mb-4">Hello, I'm</p>
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-accent-400/10 to-primary-500/10 border border-accent-400/20 rounded-full backdrop-blur-sm"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
+            </span>
+            <span className="text-sm font-semibold text-primary-600">Available for opportunities</span>
+          </motion.div>
 
-          <h1 className="heading-1 mb-6">
-            <span className="text-dark-900">Chamara</span>{' '}
-            <span className="text-gradient">Dilshan</span>
-          </h1>
+          {/* Main Heading */}
+          <motion.h1
+            className="heading-1 mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <span className="text-secondary-500">Hi, I'm </span>
+            <span className="text-gradient">Chamara Dilshan</span>
+          </motion.h1>
 
-          <h3 className="heading-3 mb-6">
-            <span className="text-dark-900">Software Engineer & Freelance Full-Stack Web Developer</span>
-          </h3>
+          {/* Subtitle */}
+          <motion.h2
+            className="heading-3 mb-6 text-neutral-700 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            Software Engineer & Full-Stack Web Developer
+          </motion.h2>
 
-          <p className="text-dark-600 mb-6 leading-relaxed">
-            I design and develop modern, scalable web applications focused on performance, usability, and reliability. I also provide IT project guidance and academic support for undergraduate students.
-          </p>
+          {/* Description */}
+          <motion.p
+            className="text-lg text-neutral-600 mb-10 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            I design and develop modern, scalable web applications focused on performance, usability, and reliability.
+            I also provide IT project guidance and academic support for undergraduate students.
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#projects" className="btn-primary">
+          {/* CTA Buttons */}
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <a href="#projects" className="btn-accent group">
               View My Work
+              <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </a>
             <a href="#contact" className="btn-outline">
               Get In Touch
             </a>
-          </div>
+          </motion.div>
         </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.button
-          onClick={scrollToAbout}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-dark-400 hover:text-primary-600 transition-colors"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 8, 0] }}
-          transition={{
-            opacity: { delay: 1 },
-            y: { duration: 1.5, repeat: Infinity, ease: 'easeInOut' },
-          }}
-          aria-label="Scroll down"
-        >
-          <HiArrowDown size={24} />
-        </motion.button>
       </div>
 
-      {/* Background Gradient */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary-100 rounded-full blur-3xl opacity-50" />
-        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-primary-50 rounded-full blur-3xl opacity-50" />
+      {/* Scroll Indicator - Outside container for better positioning */}
+      <motion.button
+        onClick={scrollToAbout}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 p-3 rounded-full border-2 border-accent-400/30 text-accent-500 hover:bg-accent-50 hover:border-accent-400 transition-all duration-300 z-20 cursor-pointer hover:scale-110"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 8, 0] }}
+        transition={{
+          opacity: { delay: 1.2 },
+          y: { duration: 2, repeat: Infinity, ease: 'easeInOut' },
+        }}
+        aria-label="Scroll down"
+      >
+        <HiArrowDown size={20} />
+      </motion.button>
+
+      {/* Enhanced Background with Brand Colors */}
+      <div className="absolute inset-0 -z-10">
+        {/* Gradient Orbs */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+          className="absolute top-20 -left-20 w-[500px] h-[500px] rounded-full opacity-20"
+          style={{
+            background: 'radial-gradient(circle, rgba(56, 189, 248, 0.4) 0%, transparent 70%)',
+            filter: 'blur(60px)',
+          }}
+        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.4 }}
+          className="absolute top-40 right-0 w-[600px] h-[600px] rounded-full opacity-15"
+          style={{
+            background: 'radial-gradient(circle, rgba(30, 79, 122, 0.5) 0%, transparent 70%)',
+            filter: 'blur(80px)',
+          }}
+        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.6 }}
+          className="absolute bottom-20 left-1/3 w-[400px] h-[400px] rounded-full opacity-20"
+          style={{
+            background: 'radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, transparent 70%)',
+            filter: 'blur(70px)',
+          }}
+        />
+
+        {/* Grid Pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(30, 79, 122, 0.5) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(30, 79, 122, 0.5) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+          }}
+        />
       </div>
     </section>
   )
