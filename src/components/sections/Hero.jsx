@@ -1,24 +1,9 @@
 import { motion } from 'framer-motion'
-import { HiArrowDown } from 'react-icons/hi'
 
 const Hero = () => {
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about')
-    if (aboutSection) {
-      const headerOffset = 80 // Height of fixed header
-      const elementPosition = aboutSection.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
-  }
-
   return (
-    <section className="min-h-screen flex items-center justify-center relative pt-16">
-      <div className="container-custom text-center relative z-10">
+    <section className="min-h-screen w-full flex items-center justify-center relative overflow-hidden">
+      <div className="container-custom text-center relative z-10 py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -89,21 +74,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator - Outside container for better positioning */}
-      <motion.button
-        onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 p-3 rounded-full border-2 border-accent-400/30 text-accent-500 hover:bg-accent-50 hover:border-accent-400 transition-all duration-300 z-20 cursor-pointer hover:scale-110"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 8, 0] }}
-        transition={{
-          opacity: { delay: 1.2 },
-          y: { duration: 2, repeat: Infinity, ease: 'easeInOut' },
-        }}
-        aria-label="Scroll down"
-      >
-        <HiArrowDown size={20} />
-      </motion.button>
 
       {/* Enhanced Background with Brand Colors */}
       <div className="absolute inset-0 -z-10">
