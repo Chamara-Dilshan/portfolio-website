@@ -5,7 +5,7 @@ export const projects = [
     description:
       'A comprehensive point-of-sale system with inventory management, sales tracking, and reporting features built with React and Node.js.',
     image: '/projects/pos-system.png',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
     liveUrl: null,
     githubUrl: 'https://github.com/Chamara-Dilshan/pos-system',
     features: [
@@ -21,7 +21,7 @@ export const projects = [
     description:
       'A full-featured car rental application allowing users to browse, book, and manage vehicle rentals with an intuitive interface.',
     image: '/projects/car-rental.png',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
     liveUrl: null,
     githubUrl: 'https://github.com/Chamara-Dilshan/car-rental',
     features: [
@@ -29,6 +29,23 @@ export const projects = [
       'Online booking and reservation system',
       'User dashboard for managing rentals',
       'Admin panel for fleet management',
+    ],
+  },
+  {
+    id: 4,
+    title: 'Hotel Booking System',
+    description:
+      'A hotel booking application that allows users to search for hotels, view room availability, and make reservations online.',
+    image: '/projects/hotel-booking.png',
+    tech: ['React', 'Spring Boot', 'PostgreSQL', 'Bootstrap'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Chamara-Dilshan/hotel-booking-system',
+    features: [
+      'Hotel search with location and date filters',
+      'Room availability and pricing display',
+      'Secure booking system with Stripe payment integration',
+      'Role-based access (Customer, Hotel Manager, Admin)',
+      'User reviews and ratings',
     ],
   },
   {
@@ -48,22 +65,6 @@ export const projects = [
     ],
   },
   {
-    id: 4,
-    title: 'Hotel Booking System',
-    description:
-      'A hotel booking application that allows users to search for hotels, view room availability, and make reservations online.',
-    image: '/projects/hotel-booking.png',
-    tech: ['React', 'Firebase', 'Tailwind CSS'],
-    liveUrl: null,
-    githubUrl: 'https://github.com/Chamara-Dilshan',
-    features: [
-      'Hotel search with location and date filters',
-      'Room availability and pricing display',
-      'Secure online booking system',
-      'User reviews and ratings',
-    ],
-  },
-  {
     id: 5,
     title: 'Plant Disease Prediction Model',
     description:
@@ -71,7 +72,7 @@ export const projects = [
     image: '/projects/plant-disease.png',
     tech: ['Python', 'TensorFlow', 'Keras'],
     liveUrl: null,
-    githubUrl: 'https://github.com/Chamara-Dilshan',
+    githubUrl: 'https://github.com/Chamara-Dilshan/plant-disease-prediction-model',
     features: [
       'Image classification using CNN',
       'Support for multiple plant species',
