@@ -32,7 +32,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     title: 'Hotel Booking System',
     description:
       'A hotel booking application that allows users to search for hotels, view room availability, and make reservations online.',
@@ -49,7 +49,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'E-Commerce Store',
     description:
       'A scalable e-commerce platform built with microservices architecture, featuring independent services for user, product, and order management with Keycloak authentication and service discovery.',
@@ -79,6 +79,24 @@ export const projects = [
       'Top-3 predictions with visual progress indicators.',
       'Optimized 7.6MB TFLite model for deployment.',
       'Modern responsive UI with interactive results display.',
+    ],
+  },
+  {
+    id: 6,
+    title: 'ProdSync - AI-Powered Etsy Message Assistant',
+    description:
+      'An AI-powered message assistant for Etsy shop owners that generates professional, policy-compliant responses to buyer messages. Features intelligent product context integration, multiple AI provider support, and a Chrome extension for seamless Etsy integration.',
+    image: '/projects/prod-sync.png',
+    tech: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Firebase', 'Chrome Extension (MV3)'],
+    
+    liveUrl: null,
+    githubUrl: 'https://github.com/Chamara-Dilshan',
+    features: [
+      'AI-powered reply generation with support for multiple providers (OpenAI, Gemini, Claude).',
+      'Chrome extension integration that injects directly into Etsy\'s message interface.',
+      'Smart product and policy management with Excel import capabilities.',
+      'Multi-tone response generation (professional, friendly, formal, casual).',
+      'Real-time Firebase sync with secure authentication and data persistence.',
     ],
   },
 ]
