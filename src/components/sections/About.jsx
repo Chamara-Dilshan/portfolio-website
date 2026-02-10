@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa'
 
 const socialLinks = [
   { icon: FaGithub, href: 'https://github.com/Chamara-Dilshan', label: 'GitHub' },
   { icon: FaLinkedin, href: 'https://linkedin.com/in/chamara-dilshan', label: 'LinkedIn' },
+  { icon: FaFacebook, href: 'https://www.facebook.com/share/1C1gKPEYxx/?mibextid=wwXIfr', label: 'Facebook' },
 ]
 
 const About = () => {
@@ -52,15 +53,17 @@ const About = () => {
               </h3>
 
               <p className="text-neutral-600 mb-4 leading-relaxed text-lg">
-                I'm a recently graduated Software Engineer from the University of Moratuwa,
-                specializing in full-stack web development using the MERN stack and Spring Boot
-                with SQL-based databases.
+                I’m a software engineer with a BSc (Hons) in Information Technology from the University of Moratuwa.
+              </p>
+
+              <p className="text-neutral-600 mb-4 leading-relaxed text-lg">
+                I design and develop reliable, scalable software solutions while providing IT solutions
+                and technical guidance to help businesses and individuals solve real-world problems.
               </p>
 
               <p className="text-neutral-600 mb-8 leading-relaxed text-lg">
-                When I'm not coding, you can find me exploring new technologies,
-                contributing to open source projects, or sharing my knowledge
-                through blog posts and tutorials.
+                My approach emphasizes clean architecture, performance, and usability, ensuring that
+                every solution is practical, maintainable, and aligned with real business needs.
               </p>
 
               <div className="flex items-center space-x-4">

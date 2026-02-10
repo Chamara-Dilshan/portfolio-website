@@ -41,7 +41,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Software Engineer & Full-Stack Web Developer
+            Software Engineer
           </motion.h2>
 
           {/* Description */}
@@ -51,8 +51,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            I design and develop modern, scalable web applications focused on performance, usability, and reliability.
-            I also provide IT project guidance and academic support for undergraduate students.
+            I provide reliable IT solutions and develop modern, scalable software applications
+            focused on performance, usability, and real-world problem solving.
           </motion.p>
 
           {/* CTA Buttons */}

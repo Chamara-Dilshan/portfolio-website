@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import Hero from '../components/sections/Hero'
 import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
+import Services from '../components/sections/Services'
 import Skills from '../components/sections/Skills'
 import Contact from '../components/sections/Contact'
 
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero />
       <About />
       <Projects />
+      <Services />
       <Skills />
       <Contact />
     </motion.div>

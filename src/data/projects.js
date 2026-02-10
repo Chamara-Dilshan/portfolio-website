@@ -88,8 +88,7 @@ export const projects = [
       'An AI-powered message assistant for Etsy shop owners that generates professional, policy-compliant responses to buyer messages. Features intelligent product context integration, multiple AI provider support, and a Chrome extension for seamless Etsy integration.',
     image: '/projects/prod-sync.png',
     tech: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Firebase', 'Chrome Extension (MV3)'],
-    
-    liveUrl: null,
+    liveUrl: 'https://prod-sync-delta.vercel.app/',
     githubUrl: 'https://github.com/Chamara-Dilshan',
     features: [
       'AI-powered reply generation with support for multiple providers (OpenAI, Gemini, Claude).',

@@ -1,8 +1,9 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaFacebook, FaEnvelope } from 'react-icons/fa'
 
 const socialLinks = [
   { icon: FaGithub, href: 'https://github.com/Chamara-Dilshan', label: 'GitHub' },
   { icon: FaLinkedin, href: 'https://linkedin.com/in/chamara-dilshan', label: 'LinkedIn' },
+  { icon: FaFacebook, href: 'https://www.facebook.com/share/1C1gKPEYxx/?mibextid=wwXIfr', label: 'Facebook' },
   { icon: FaEnvelope, href: 'mailto:chamaradilshan.dev@gmail.com', label: 'Email' },
 ]
 

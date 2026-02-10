@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern minimalist portfolio website built with React + Vite, featuring sections for About Me, Projects, Skills, Contact, and a Markdown-based blog.
+A modern minimalist portfolio website built with React + Vite, featuring sections for About Me, Projects, Services, Skills, Contact, and a Markdown-based blog.
 
 ## Tech Stack
 
@@ -40,10 +40,12 @@ portfolio-website/
 │   │   │   ├── Hero.jsx       # Landing section with CTA
 │   │   │   ├── About.jsx      # Bio and profile
 │   │   │   ├── Projects.jsx   # Project showcase grid
+│   │   │   ├── Services.jsx   # Services showcase grid
 │   │   │   ├── Skills.jsx     # Skills by category
 │   │   │   └── Contact.jsx    # Contact form
 │   │   └── ui/                # Reusable UI components
 │   │       ├── ProjectCard.jsx
+│   │       ├── ServiceCard.jsx
 │   │       ├── SkillBadge.jsx
 │   │       ├── BlogCard.jsx
 │   │       └── Button.jsx
@@ -53,6 +55,7 @@ portfolio-website/
 │   │   └── BlogPost.jsx       # Individual blog post
 │   ├── data/                  # Content data files
 │   │   ├── projects.js        # Portfolio projects
+│   │   ├── services.js        # Professional services
 │   │   ├── skills.js          # Skills & technologies
 │   │   └── blogPosts.js       # Blog post content
 │   ├── styles/
@@ -126,7 +129,33 @@ export const skills = {
 
 **Available icon keys:** `react`, `javascript`, `typescript`, `html`, `css`, `tailwind`, `node`, `express`, `mongodb`, `postgresql`, `git`, `github`, `docker`, `figma`, `vite`, `nextjs`, `python`, `firebase`, `redux`, `graphql`
 
-### 4. Add Blog Posts
+### 4. Update Services
+
+**Edit `src/data/services.js`:**
+
+```javascript
+export const services = [
+  {
+    id: 1,
+    title: 'Service Name',
+    description: 'Description of the service and what you offer',
+    icon: 'code',  // Icon key: code, lightbulb, project, briefcase
+    features: [
+      'Feature 1',
+      'Feature 2',
+      'Feature 3',
+      'Feature 4',
+    ],
+  },
+  // Add more services...
+];
+```
+
+**Available icon keys:** `code` (FaCode), `lightbulb` (FaLightbulb), `project` (FaProjectDiagram), `briefcase` (FaBriefcase)
+
+To add more icons, edit `src/components/ui/ServiceCard.jsx` and add to the `iconMap` object.
+
+### 5. Add Blog Posts
 
 **Edit `src/data/blogPosts.js`:**
 
@@ -156,7 +185,7 @@ const hello = 'world';
 ];
 ```
 
-### 5. Update Contact Information
+### 6. Update Contact Information
 
 **Edit `src/components/sections/Contact.jsx`:**
 - Change email address
@@ -190,13 +219,14 @@ const hello = 'world';
 
 | Path | Page | Description |
 |------|------|-------------|
-| `/` | Home | All sections (Hero, About, Projects, Skills, Contact) |
+| `/` | Home | All sections (Hero, About, Projects, Services, Skills, Contact) |
 | `/blog` | BlogList | Grid of blog post cards |
 | `/blog/:slug` | BlogPost | Individual blog post |
 
 ### Section Anchors (on homepage)
 - `/#about` - About section
 - `/#projects` - Projects section
+- `/#services` - Services section
 - `/#skills` - Skills section
 - `/#contact` - Contact section
 
