@@ -65,7 +65,7 @@ const Projects = () => {
       {/* Project Detail Modal */}
       <ProjectModal
         project={selectedProject}
-        isOpen={!!selectedProject}
+        isOpen={selectedProject !== null && selectedProject !== undefined}
         onClose={() => setSelectedProject(null)}
       />
     </section>

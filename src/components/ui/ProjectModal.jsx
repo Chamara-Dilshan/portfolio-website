@@ -9,17 +9,22 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     const handleEscape = (e) => {
       if (e.key === 'Escape') onClose()
     }
+
     if (isOpen) {
       document.addEventListener('keydown', handleEscape)
       document.body.style.overflow = 'hidden'
+    } else {
+      // Explicitly reset when closed
+      document.body.style.overflow = 'unset'
     }
+
     return () => {
       document.removeEventListener('keydown', handleEscape)
       document.body.style.overflow = 'unset'
     }
   }, [isOpen, onClose])
 
-  if (!project) return null
+  if (!project || !isOpen) return null
 
   const { title, description, image, tech, liveUrl, githubUrl, features } = project
 
@@ -37,7 +42,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           />
 
           {/* Modal */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}

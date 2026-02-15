@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { useForm } from 'react-hook-form'
@@ -16,7 +15,10 @@ const Contact = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm()
+  } = useForm({
+    mode: 'onSubmit',
+    reValidateMode: 'onChange',
+  })
 
   const onSubmit = async (data) => {
     setIsSubmitting(true)
@@ -40,6 +42,7 @@ const Contact = () => {
       if (result.success) {
         setSubmitStatus('success')
         reset()
+        setTimeout(() => setSubmitStatus(null), 5000)
       } else {
         setSubmitStatus('error')
       }
@@ -53,11 +56,11 @@ const Contact = () => {
   return (
     <section id="contact" className="section-padding">
       <div className="container-custom">
-        <motion.div
+        <div
           ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          className={`transition-all duration-600 ${
+            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
         >
           <h2 className="heading-2 text-center mb-4 text-secondary-500">
             Get In <span className="text-gradient">Touch</span>
@@ -121,6 +124,8 @@ const Contact = () => {
                     id="name"
                     className={`input ${errors.name ? 'border-red-500' : ''}`}
                     placeholder="Your name"
+                    autoComplete="name"
+                    disabled={isSubmitting}
                     {...register('name', { required: 'Name is required' })}
                   />
                   {errors.name && (
@@ -139,6 +144,8 @@ const Contact = () => {
                     id="email"
                     className={`input ${errors.email ? 'border-red-500' : ''}`}
                     placeholder="your@email.com"
+                    autoComplete="email"
+                    disabled={isSubmitting}
                     {...register('email', {
                       required: 'Email is required',
                       pattern: {
@@ -165,6 +172,7 @@ const Contact = () => {
                       errors.message ? 'border-red-500' : ''
                     }`}
                     placeholder="Your message..."
+                    disabled={isSubmitting}
                     {...register('message', {
                       required: 'Message is required',
                       minLength: {
@@ -214,7 +222,7 @@ const Contact = () => {
               </form>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
