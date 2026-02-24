@@ -48,20 +48,23 @@ export const projects = [
       'User reviews and ratings.',
     ],
   },
-  {
+    {
     id: 4,
-    title: 'E-Commerce Store',
+    title: 'PrimeWear - Multi-Vendor E-Commerce Platform',
     description:
-      'A scalable e-commerce platform built with microservices architecture, featuring independent services for user, product, and order management with Keycloak authentication and service discovery.',
-    image: '/projects/e-commerce.png',
-    tech: ['React', 'Node.js', 'Express', 'Spring Boot', 'MySQL', 'MongoDB', 'Spring Cloud', 'Eureka', 'Gateway', 'Keycloak'],
-    liveUrl: null,  
-    githubUrl: 'https://github.com/Chamara-Dilshan',
+      'Full-stack e-commerce platform where vendors sell through an admin-controlled marketplace. Features escrow payments via PayHere, real-time Socket.io chat, dispute resolution, wallet payouts, and a complete analytics dashboard.',
+    image: '/projects/prime-wear.png',
+    tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Supabase', 'Redis (Upstash)', 'Socket.io', 'Tailwind CSS', 'shadcn/ui', 'Cloudinary', 'PayHere', 'Resend'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Chamara-Dilshan/PrimeWear',
     features: [
-      'Microservices architecture with Eureka service discovery.',
-      'Centralized authentication with Keycloak SSO.',
-      'Separate admin panel and customer-facing application.',
-      'API Gateway for unified routing and load balancing.',
+        'Escrow payments via PayHere - funds released only after delivery confirmation.',
+        'Real-time Socket.io chat per order with server-side contact info filtering.',
+        'Vendor wallet with pending/available balances and admin-approved payouts.',
+        'Dispute resolution with evidence uploads and automatic refund processing.',
+        'Vendor wallet with pending/available balances and admin-approved payouts.',
+        'Auto-generate combinations with per-variant pricing.',
+        'Analytics dashboards with interactive charts and CSV exports for sales, orders, and customer insights.',
     ],
   },
   {
@@ -96,6 +99,22 @@ export const projects = [
       'Smart product and policy management with Excel import capabilities.',
       'Multi-tone response generation (professional, friendly, formal, casual).',
       'Real-time Firebase sync with secure authentication and data persistence.',
+    ],
+  },
+  {
+    id: 7,
+    title: 'E-Commerce Store',
+    description:
+      'A scalable e-commerce platform built with microservices architecture, featuring independent services for user, product, and order management with Keycloak authentication and service discovery.',
+    image: '/projects/e-commerce.png',
+    tech: ['React', 'Node.js', 'Express', 'Spring Boot', 'MySQL', 'MongoDB', 'Spring Cloud', 'Eureka', 'Gateway', 'Keycloak'],
+    liveUrl: null,  
+    githubUrl: 'https://github.com/Chamara-Dilshan',
+    features: [
+      'Microservices architecture with Eureka service discovery.',
+      'Centralized authentication with Keycloak SSO.',
+      'Separate admin panel and customer-facing application.',
+      'API Gateway for unified routing and load balancing.',
     ],
   },
 ]
