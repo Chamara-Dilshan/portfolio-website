@@ -1,61 +1,12 @@
 export const projects = [
   {
     id: 1,
-    title: 'POS System',
-    description:
-      'A comprehensive point-of-sale system with inventory management, sales tracking, and reporting features built with React and Node.js.',
-    image: '/projects/pos-system.png',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
-    liveUrl: null,
-    githubUrl: 'https://github.com/Chamara-Dilshan/pos-system',
-    features: [
-      'Real-time inventory tracking and management.',
-      'Sales analytics and reporting dashboard.',
-      'User authentication and role-based access.',
-      'Receipt generation and printing support.',
-    ],
-  },
-  {
-    id: 2,
-    title: 'Car Rental Platform',
-    description:
-      'A full-featured car rental application allowing users to browse, book, and manage vehicle rentals with an intuitive interface.',
-    image: '/projects/car-rental.png',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
-    liveUrl: null,
-    githubUrl: 'https://github.com/Chamara-Dilshan/car-rental',
-    features: [
-      'Vehicle search with filters and availability.',
-      'Online booking and reservation system.',
-      'User dashboard for managing rentals.',
-      'Admin panel for fleet management.',
-    ],
-  },
-  {
-    id: 3,
-    title: 'Hotel Booking System',
-    description:
-      'A hotel booking application that allows users to search for hotels, view room availability, and make reservations online.',
-    image: '/projects/hotel-booking.png',
-    tech: ['React', 'Spring Boot', 'PostgreSQL', 'Bootstrap'],
-    liveUrl: null,
-    githubUrl: 'https://github.com/Chamara-Dilshan/hotel-booking-system',
-    features: [
-      'Hotel search with location and date filters.',
-      'Room availability and pricing display.',
-      'Secure booking system with Stripe payment integration.',
-      'Role-based access (Customer, Hotel Manager, Admin).',
-      'User reviews and ratings.',
-    ],
-  },
-    {
-    id: 4,
     title: 'PrimeWear - Multi-Vendor E-Commerce Platform',
     description:
       'Full-stack e-commerce platform where vendors sell through an admin-controlled marketplace. Features escrow payments via PayHere, real-time Socket.io chat, dispute resolution, wallet payouts, and a complete analytics dashboard.',
     image: '/projects/prime-wear.png',
     tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Supabase', 'Redis (Upstash)', 'Socket.io', 'Tailwind CSS', 'shadcn/ui', 'Cloudinary', 'PayHere', 'Resend'],
-    liveUrl: null,
+    liveUrl: 'https://primewear.vercel.app',
     githubUrl: 'https://github.com/Chamara-Dilshan/PrimeWear',
     features: [
         'Escrow payments via PayHere - funds released only after delivery confirmation.',
@@ -68,7 +19,24 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 2,
+    title: 'ProdSync - AI-Powered Etsy Message Assistant',
+    description:
+      'An AI-powered message assistant for Etsy shop owners that generates professional, policy-compliant responses to buyer messages. Features intelligent product context integration, multiple AI provider support, and a Chrome extension for seamless Etsy integration.',
+    image: '/projects/prod-sync.png',
+    tech: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Firebase', 'Chrome Extension (MV3)'],
+    liveUrl: 'https://prod-sync-delta.vercel.app/',
+    githubUrl: 'https://github.com/Chamara-Dilshan//ProdSync',
+    features: [
+      'AI-powered reply generation with support for multiple providers (OpenAI, Gemini, Claude).',
+      'Chrome extension integration that injects directly into Etsy\'s message interface.',
+      'Smart product and policy management with Excel import capabilities.',
+      'Multi-tone response generation (professional, friendly, formal, casual).',
+      'Real-time Firebase sync with secure authentication and data persistence.',
+    ],
+  },
+  {
+    id: 3,
     title: 'Plant Disease Recognition System',
     description:
       'An AI-powered web application that identifies plant diseases from leaf images with real-time analysis across 38 disease classes for 14 crop types built with TensorFlow and Streamlit.',
@@ -85,20 +53,52 @@ export const projects = [
     ],
   },
   {
-    id: 6,
-    title: 'ProdSync - AI-Powered Etsy Message Assistant',
+    id: 4,
+    title: 'POS System',
     description:
-      'An AI-powered message assistant for Etsy shop owners that generates professional, policy-compliant responses to buyer messages. Features intelligent product context integration, multiple AI provider support, and a Chrome extension for seamless Etsy integration.',
-    image: '/projects/prod-sync.png',
-    tech: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Firebase', 'Chrome Extension (MV3)'],
-    liveUrl: 'https://prod-sync-delta.vercel.app/',
-    githubUrl: 'https://github.com/Chamara-Dilshan//ProdSync',
+      'A comprehensive point-of-sale system with inventory management, sales tracking, and reporting features built with React and Node.js.',
+    image: '/projects/pos-system.png',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Chamara-Dilshan/pos-system',
     features: [
-      'AI-powered reply generation with support for multiple providers (OpenAI, Gemini, Claude).',
-      'Chrome extension integration that injects directly into Etsy\'s message interface.',
-      'Smart product and policy management with Excel import capabilities.',
-      'Multi-tone response generation (professional, friendly, formal, casual).',
-      'Real-time Firebase sync with secure authentication and data persistence.',
+      'Real-time inventory tracking and management.',
+      'Sales analytics and reporting dashboard.',
+      'User authentication and role-based access.',
+      'Receipt generation and printing support.',
+    ],
+  },
+  {
+    id: 5,
+    title: 'Car Rental Platform',
+    description:
+      'A full-featured car rental application allowing users to browse, book, and manage vehicle rentals with an intuitive interface.',
+    image: '/projects/car-rental.png',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Chamara-Dilshan/car-rental',
+    features: [
+      'Vehicle search with filters and availability.',
+      'Online booking and reservation system.',
+      'User dashboard for managing rentals.',
+      'Admin panel for fleet management.',
+    ],
+  },
+  {
+    id: 6,
+    title: 'Hotel Booking System',
+    description:
+      'A hotel booking application that allows users to search for hotels, view room availability, and make reservations online.',
+    image: '/projects/hotel-booking.png',
+    tech: ['React', 'Spring Boot', 'PostgreSQL', 'Bootstrap'],
+    liveUrl: null,
+    githubUrl: 'https://github.com/Chamara-Dilshan/hotel-booking-system',
+    features: [
+      'Hotel search with location and date filters.',
+      'Room availability and pricing display.',
+      'Secure booking system with Stripe payment integration.',
+      'Role-based access (Customer, Hotel Manager, Admin).',
+      'User reviews and ratings.',
     ],
   },
   {
