@@ -92,7 +92,7 @@ export const projects = [
     image: '/projects/prod-sync.png',
     tech: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Firebase', 'Chrome Extension (MV3)'],
     liveUrl: 'https://prod-sync-delta.vercel.app/',
-    githubUrl: 'https://github.com/Chamara-Dilshan',
+    githubUrl: 'https://github.com/Chamara-Dilshan//ProdSync',
     features: [
       'AI-powered reply generation with support for multiple providers (OpenAI, Gemini, Claude).',
       'Chrome extension integration that injects directly into Etsy\'s message interface.',
