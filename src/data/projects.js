@@ -59,7 +59,7 @@ export const projects = [
       'A comprehensive point-of-sale system with inventory management, sales tracking, and reporting features built with React and Node.js.',
     image: '/projects/pos-system.png',
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
-    liveUrl: null,
+    liveUrl: 'https://3d055ce7.cloudpos-cuj.pages.dev/',
     githubUrl: 'https://github.com/Chamara-Dilshan/pos-system',
     features: [
       'Real-time inventory tracking and management.',
