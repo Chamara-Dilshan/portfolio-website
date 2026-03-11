@@ -36,6 +36,27 @@ export const projects = [
     ],
   },
   {
+    id: 8,
+    title: 'WhatsApp Business Support Bot - Multi-Tenant SaaS',
+    description:
+      'Multi-tenant WhatsApp Business support automation platform. Businesses connect their WhatsApp number to get AI-powered intent detection, automated replies, order tracking, and a full agent inbox — all managed from a dashboard.',
+    image: '/projects/whatsapp-bot.png',
+    tech: ['Next.js', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Prisma ORM', 'Redis', 'BullMQ', 'Tailwind CSS', 'Stripe', 'Prometheus', 'Grafana'],
+    liveUrl: 'https://whatsapp-chatbot-dashboard-liart.vercel.app',
+    githubUrl: 'https://github.com/Chamara-Dilshan/PrimeWear',
+    features: [
+      'Multi-tenant architecture — each business gets isolated data, policies, and WhatsApp connection',
+     'Rules-first + AI fallback intent detection (Anthropic / OpenAI / Gemini)',
+      'Agent inbox with conversation assignment, case management, and SLA tracking',
+      'Order management with shipment tracking and WhatsApp bot status lookups',
+      'Stripe billing with FREE / PRO / BUSINESS plans and per-tenant usage quotas',
+      'BullMQ webhook queue with Redis for reliable inbound message processing',
+      'n8n automation integration for post-delivery flows and custom triggers',
+      'Prometheus + Grafana monitoring with 5 alert rules and 8-panel dashboard',
+      'Language auto-detection (Sinhala / Tamil / English) with tone-aware responses',
+    ],
+  },
+  {
     id: 3,
     title: 'Plant Disease Recognition System',
     description:
